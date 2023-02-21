@@ -26,6 +26,7 @@ in
       pcre
       systemd
       zlib
+      gtest
       # Helpers
       clang-tools
       nodejs

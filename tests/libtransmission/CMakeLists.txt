@@ -71,7 +71,7 @@ target_compile_options(libtransmission-test
 target_link_libraries(libtransmission-test
     PRIVATE
         ${TR_NAME}
-        gtestall
+	GTest::gtest_main
         dht::dht
         fmt::fmt-header-only
         libevent::event

@@ -1,4 +1,3 @@
-add_subdirectory(gtest)
 add_subdirectory(libtransmission)
 if(ENABLE_UTILS)
     add_subdirectory(utils)

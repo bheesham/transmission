@@ -65,6 +65,7 @@ tr_auto_option(USE_SYSTEM_NATPMP "Use system natpmp library" AUTO)
 tr_auto_option(USE_SYSTEM_UTP "Use system utp library" AUTO)
 tr_auto_option(USE_SYSTEM_B64 "Use system b64 library" AUTO)
 tr_auto_option(USE_SYSTEM_PSL "Use system psl library" AUTO)
+tr_auto_option(USE_SYSTEM_GTEST "Use system gtest library" AUTO)
 tr_list_option(USE_GTK_VERSION "Use specific GTK version" AUTO 3 4)
 tr_list_option(USE_QT_VERSION "Use specific Qt version" AUTO 5 6)
 tr_list_option(WITH_CRYPTO "Use specified crypto library" AUTO ccrypto mbedtls openssl wolfssl)
@@ -753,6 +754,9 @@ endif()
 
 if(ENABLE_TESTS)
     enable_testing()
+    tr_add_external_auto_library(GTEST googletest GTest
+        SUBPROJECT
+        TARGET GTest::gtest_main)
     add_subdirectory(tests)
 endif()
 
